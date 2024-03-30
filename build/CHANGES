@@ -1,0 +1,50 @@
+XigmaNAS® 13.2.0.5 - Heighliner
+-------------------------
+Changes:
+- Upgrade to FreeBSD 13.2-RELEASE P11.
+- Upgrade netatalk3 to v3.1.14.
+- Upgrade jquery to v3.7.0.
+- Upgrade msmtp to v1.8.25.
+- Upgrade zoneinfo to v2024a.
+- Upgrade netatalk to v3.1.18.
+- Upgrade lighttpd to v1.4.75.
+- Upgrade devcpu-data-amd to v20240116.
+- Upgrade devcpu-data-intel to v20240312.
+- Upgrade nut to v20240324.
+- Upgrade bash to v5.2p26.
+- Upgrade pecl-APCu to v5.1.23.
+- Upgrade sudo to v1.9.15p5.
+- Upgrade virtualbox-ose to v6.1.50.
+- Upgrade dmidecode to v3.5.
+- Upgrade gzip to v1.13.
+- Upgrade inadyn to v2.12.0.
+- Upgrade iperf3 to v3.16.
+- Upgrade mDNSResponder to v2200.80.16.
+- Upgrade smartmontools to v7.4.
+- Upgrade proftpd to v1.3.8b.
+- Upgrade php8 to v8.2.17.
+- Upgrade syncthing to v1.27.4.
+
+Fixes:
+
+
+Permanent restrictions:
+- It is not possible to format a SoftRAID disk with MSDOS FAT16/32.
+- It is not possible to encrypt a disk partition, only complete disks are supported.
+- AFP shares with TimeMachine support are limited to max. 4 shares.
+- Upgrade php to 8.0.13.
+Known bugs:
+- If DHCP for IPv4 is used, the IPv6 statically configured DNS server will be
+  overriden by the IPv4 DNS server.
+
+NEED TESTING:
+- IPv6: auto mode.
+- All services using IPv6 address. (NFS, FTP, etc...)
+- Netatalk VFS Samba module (automatically enabled when Netatalk starts) crashes
+  samba when accessing to share.
+- Need to write an online-test procedure.
+
+Help needed:
+- Need help for adding LDAP authentication feature:
+  Main services can be easily authenticated using PAM-LDAP, but is harder for Samba.
+
